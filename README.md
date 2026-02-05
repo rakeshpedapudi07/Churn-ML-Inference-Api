@@ -35,7 +35,7 @@ status, the system predicts whether a customer is likely to churn.
 ---
 
 ## 📂 Project Structure
-
+```
 .
 ├── app/ # FastAPI application
 │ └── main.py
@@ -45,7 +45,7 @@ status, the system predicts whether a customer is likely to churn.
 ├── requirements.txt # Python dependencies
 └── README.md
 
-
+```
 ---
 
 ## ▶️ Running the Application (Docker)
@@ -56,16 +56,21 @@ status, the system predicts whether a customer is likely to churn.
 ### Build the Docker image
 ```bash
 docker build -t churn-ml-api .
+```
 Run the container
+```
 docker run -p 8000:8000 churn-ml-api
+```
 🔍 API Usage
 Once the container is running, open:
-
+```
 http://127.0.0.1:8000/docs
+```
 This opens the Swagger UI where you can test the API.
 
 Example Request
 POST /predict
+```
 {
   "credit_score": 600,
   "age": 40,
@@ -79,14 +84,15 @@ POST /predict
   "country_Spain": 1,
   "gender_Male": 1
 }
-Example Response
+```
+Example Response:
+```
 {
   "churn_prediction": 0
 }
+```
 📌 Notes
 The model is trained offline and loaded at application startup.
-
 This project focuses on inference and deployment, not model optimization.
-
 Designed to demonstrate production-style ML system design.
 
