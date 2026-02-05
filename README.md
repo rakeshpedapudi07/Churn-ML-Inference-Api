@@ -61,7 +61,7 @@ Run the container
 ```
 docker run -p 8000:8000 churn-ml-api
 ```
-🔍 API Usage
+API Usage
 Once the container is running, open:
 ```
 http://127.0.0.1:8000/docs
