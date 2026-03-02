@@ -94,11 +94,6 @@ Example Response:
 }
 ```
 ## 🌐 Live Deployment
-## API:
-```
-https://churn-ml-inference-api.onrender.com
-``` 
-## Docs:
 ```
 https://churn-ml-inference-api.onrender.com/docs
 ```
