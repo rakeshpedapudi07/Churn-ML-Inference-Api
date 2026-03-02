@@ -93,6 +93,16 @@ Example Response:
   "churn_prediction": 0
 }
 ```
+## 🌐 Live Deployment
+## API:
+```
+https://churn-ml-inference-api.onrender.com
+``` 
+## Docs:
+```
+https://churn-ml-inference-api.onrender.com/docs
+```
+
 📌 Notes
 The model is trained offline and loaded at application startup
 Focuses on inference & deployment, not model tuning
