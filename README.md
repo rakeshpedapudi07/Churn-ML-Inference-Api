@@ -98,7 +98,3 @@ Example Response:
 https://churn-ml-inference-api.onrender.com/docs
 ```
 
-📌 Notes
-The model is trained offline and loaded at application startup
-Focuses on inference & deployment, not model tuning
-Designed to demonstrate production-style ML system design
