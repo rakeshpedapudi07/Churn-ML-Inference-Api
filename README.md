@@ -6,7 +6,7 @@ REST API using FastAPI, and deploy it in a reproducible way using Docker.
 
 ---
 
-## 🚀 Features
+##  Features
 
 - End-to-end ML pipeline (data preprocessing → model training → inference)
 - Trained classification model using scikit-learn
@@ -16,7 +16,7 @@ REST API using FastAPI, and deploy it in a reproducible way using Docker.
 
 ---
 
-## 🧠 Problem Statement
+##  Problem Statement
 
 Customer churn prediction is a common real-world machine learning problem.
 Given customer attributes such as credit score, age, balance, and activity
@@ -24,7 +24,7 @@ status, the system predicts whether a customer is likely to churn.
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - **Language:** Python
 - **Machine Learning:** scikit-learn
@@ -34,7 +34,7 @@ status, the system predicts whether a customer is likely to churn.
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 ```
 .
 ├── app/
@@ -50,7 +50,7 @@ status, the system predicts whether a customer is likely to churn.
 ```
 ---
 
-## ▶️ Running the Application (Docker)
+##  Running the Application (Docker)
 
 ### Prerequisites
 - Docker installed and running
@@ -59,14 +59,14 @@ status, the system predicts whether a customer is likely to churn.
 ```bash
 docker build -t churn-ml-api .
 ```
-Run the container
+## Run the container
 ```
 docker run -p 8000:8000 churn-ml-api
 ```
-📸 API Preview (Swagger UI)
+##  API Preview (Swagger UI)
 Below is a preview of the FastAPI Swagger UI showing the /predict endpoint:
 
-📡 API Usage
+## API Usage
 Open Swagger UI:
 ```
 http://127.0.0.1:8000/docs
@@ -93,7 +93,7 @@ Example Response:
   "churn_prediction": 0
 }
 ```
-## 🌐 Live Deployment
+##  Live Deployment
 ```
 https://churn-ml-inference-api.onrender.com/docs
 ```
