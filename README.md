@@ -54,7 +54,7 @@ flowchart TD
 flowchart LR
     A[Client / User] --> B[FastAPI Server]
     B --> C[Pydantic Validation]
-    C --> D[ML Model (scikit-learn)]
+    C --> D[ML Model - scikit learn]
     D --> B
     B --> E[JSON Response]
 
