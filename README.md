@@ -37,12 +37,16 @@ status, the system predicts whether a customer is likely to churn.
 
 ```mermaid
 flowchart TD
-    A[Input Customer Data] --> B[Data Preprocessing]
-    B --> C[Feature Engineering]
-    C --> D[Trained ML Model]
-    D --> E[Prediction (Churn / No Churn)]
-    E --> F[API Response (JSON)]
+    A[User Input Data] --> B[Data Preprocessing]
+    B --> C[Feature Transformation]
+    C --> D[ML Model Inference]
+    D --> E{Prediction Result}
+    E -->|0| F[No Churn]
+    E -->|1| G[Churn]
+    F --> H[Return JSON Response]
+    G --> H
 ```
+---
 
 ## System Architecture
 
@@ -58,6 +62,58 @@ flowchart LR
         F[Docker Container]
         B --> F
     end
+```
+## API Request Flow
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant A as FastAPI
+    participant V as Validator
+    participant M as ML Model
+
+    U->>A: POST /predict
+    A->>V: Validate Input (Pydantic)
+    V-->>A: Valid Data
+    A->>M: Send Features
+    M-->>A: Prediction
+    A-->>U: JSON Response
+```
+---
+## Project Structure (Visual)
+
+```mermaid
+graph TD
+    A[churn-ml-inference-api]
+
+    subgraph Application
+        B[app]
+        B --> B1[main.py]
+    end
+
+    subgraph ML Assets
+        C[model]
+        D[data]
+    end
+
+    subgraph Resources
+        E[images]
+        E --> E1[swagger-ui.png]
+    end
+
+    subgraph Config
+        F[Dockerfile]
+        G[requirements.txt]
+        H[README.md]
+    end
+
+    A --> B
+    A --> C
+    A --> D
+    A --> E
+    A --> F
+    A --> G
+    A --> H
 ```
 ---
 
