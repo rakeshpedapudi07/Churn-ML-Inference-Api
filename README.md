@@ -63,6 +63,8 @@ flowchart LR
         B --> F
     end
 ```
+---
+
 ## API Request Flow
 
 ```mermaid
