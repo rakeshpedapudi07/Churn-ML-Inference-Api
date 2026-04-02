@@ -33,20 +33,31 @@ status, the system predicts whether a customer is likely to churn.
 - **Runtime:** Uvicorn
 
 ---
+## How It Works
 
-##  Project Structure
+```mermaid
+flowchart TD
+    A[Input Customer Data] --> B[Data Preprocessing]
+    B --> C[Feature Engineering]
+    C --> D[Trained ML Model]
+    D --> E[Prediction (Churn / No Churn)]
+    E --> F[API Response (JSON)]
 ```
-.
-├── app/
-│ └── main.py
-├── model/
-├── data/
-├── images/
-│ └── swagger-ui.png
-├── Dockerfile
-├── requirements.txt
-└── README.md
 
+## System Architecture
+
+```mermaid
+flowchart LR
+    A[Client / User] --> B[FastAPI Server]
+    B --> C[Pydantic Validation]
+    C --> D[ML Model (scikit-learn)]
+    D --> B
+    B --> E[JSON Response]
+
+    subgraph Deployment
+        F[Docker Container]
+        B --> F
+    end
 ```
 ---
 
